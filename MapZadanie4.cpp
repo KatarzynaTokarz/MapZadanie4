@@ -9,11 +9,12 @@ int main()
 
    for (int i = 0; i < zdanie.size(); ++i)
    {
-       if (counter.find(zdanie[i]) != counter.end()) {
+       if (counter.find(zdanie[i]) != counter.end())
+       {
            counter[zdanie[i]] = counter[zdanie[i]]++;
        }
        else {
-           //omijamy spacje
+           //omijam spacje
            if (zdanie[i] != ' ')
            {
                counter[zdanie[i]] = 1; 
