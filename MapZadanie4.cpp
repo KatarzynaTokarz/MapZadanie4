@@ -9,8 +9,7 @@ int main()
 
    for (int i = 0; i < zdanie.size(); ++i)
    {
-       if (counter.find(zdanie[i]) != counter.end())
-       {
+       if (counter.find(zdanie[i]) != counter.end()) {
            counter[zdanie[i]] = counter[zdanie[i]]++;
        }
        else {
@@ -24,7 +23,20 @@ int main()
 
    for (auto& it : counter)
    {
-       std::cout << it.first << ' ' << it.second << std::endl;
+       std::cout << it.first << " = " << it.second << std::endl;
    }
+
+   std::cout << std::endl;
+
+
+   for (auto kv : counter)
+   {
+       auto& key = kv.first;
+       auto& value = kv.second;
+
+
+       std::cout << key << " = " << value << std::endl;
+   }
+
 }
 
